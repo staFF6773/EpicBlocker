@@ -7,6 +7,7 @@ api-version: '1.16'
 commands:
   reload:
     description: Reload the config.yml configuration
+    usage: /eb reload
 
 permissions:
   epicblocker.reload:
