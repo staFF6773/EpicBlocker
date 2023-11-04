@@ -1,0 +1,20 @@
+#
+# $$$$$$$$\            $$\           $$$$$$$\  $$\                     $$\
+# $$  _____|          \__|          $$  __$$\ $$ |                    $$ |
+# $$ |       $$$$$$\  $$\  $$$$$$$\ $$ |  $$ |$$ | $$$$$$\   $$$$$$$\ $$ |  $$\  $$$$$$\   $$$$$$\
+# $$$$$\    $$  __$$\ $$ |$$  _____|$$$$$$$\ |$$ |$$  __$$\ $$  _____|$$ | $$  |$$  __$$\ $$  __$$\
+# $$  __|   $$ /  $$ |$$ |$$ /      $$  __$$\ $$ |$$ /  $$ |$$ /      $$$$$$  / $$$$$$$$ |$$ |  \__|
+# $$ |      $$ |  $$ |$$ |$$ |      $$ |  $$ |$$ |$$ |  $$ |$$ |      $$  _$$<  $$   ____|$$ |
+# $$$$$$$$\ $$$$$$$  |$$ |\$$$$$$$\ $$$$$$$  |$$ |\$$$$$$  |\$$$$$$$\ $$ | \$$\ \$$$$$$$\ $$ |
+# \________|$$  ____/ \__| \_______|\_______/ \__| \______/  \_______|\__|  \__| \_______|\__|
+#          $$ |
+#          $$ |
+#          \__|
+#
+# Configuration file. Done with ❤ by Notstaff.
+# For support: https://discord.gg/mjvPdx9nC8
+
+# The prefix is updated every time the server
+# is restarted or powered on and remember to read the /epicpremium:reload message.
+
+prefix: "&f[&bEpicPremium&f]" #Prefix that comes by default you can customize it without any problem.

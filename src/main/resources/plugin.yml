@@ -1,0 +1,14 @@
+name: EpicBlocker
+version: '${project.version}'
+main: cl.staff.epicblocker.EpicBlocker
+author: Not_staff
+api-version: '1.16'
+
+commands:
+  reload:
+    description: Reload the config.yml configuration
+
+permissions:
+  epicblocker.reload:
+    description: It gives you the permission to execute the /eb reload command.
+    default: false
