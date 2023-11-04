@@ -18,3 +18,13 @@
 # is restarted or powered on and remember to read the /epicpremium:reload message.
 
 prefix: "&cEpicBlocker &7»" #Prefix that comes by default you can customize it without any problem.
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# | CHAT MANAGEMENT                          |
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+# List of words that will be blocked
+blocked-words:
+  - fuck
+  - shit
+  - bitch
