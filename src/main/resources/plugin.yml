@@ -12,3 +12,7 @@ permissions:
   epicblocker.reload:
     description: It gives you the permission to execute the /eb reload command.
     default: false
+
+  epicblocker.bypass:
+    description: Allows players to ignore the blocking of forbidden words.
+    default: false
