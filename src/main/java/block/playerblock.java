@@ -9,7 +9,7 @@ import utils.ChatUtils;
 
 public class playerblock implements Listener {
 
-    private final EpicBlocker plugin;
+        private final EpicBlocker plugin;
 
     public playerblock(EpicBlocker plugin) {
         this.plugin = plugin;
@@ -22,9 +22,10 @@ public class playerblock implements Listener {
 
         for (String blockedWord : plugin.getConfig().getStringList("blocked-words")) {
             if (message.toLowerCase().contains(blockedWord.toLowerCase())) {
-                player.sendMessage(ChatUtils.getColoredMessage(EpicBlocker.prefix + " &cNo escribas palabras feas en el chat"));
+                String errorMessage = plugin.getConfig().getString("error-message");
+                player.sendMessage(ChatUtils.getColoredMessage(EpicBlocker.prefix + " " + errorMessage));
                 event.setCancelled(true);
-                break;  // Puedes detener el bucle después de encontrar la primera coincidencia
+                break;
             }
         }
     }
