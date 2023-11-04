@@ -28,3 +28,10 @@ blocked-words:
   - fuck
   - shit
   - bitch
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# | Messages                                 |
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+error-message: "&cThis word is blocked by the server"
+no-permission-message: "&c&lUPS &cSorry, but you do not have permission to execute this command."
