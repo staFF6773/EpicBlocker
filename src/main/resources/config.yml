@@ -14,8 +14,8 @@
 # Configuration file. Done with ❤ by Notstaff.
 # For support: https://discord.gg/mjvPdx9nC8
 
-# The prefix is updated every time the server
-# is restarted or powered on and remember to read the /epicpremium:reload message.
+# The prefix is updated every time the server,
+# is restarted or powered on and remember to read the /epicblocker:reload message.
 
 prefix: "&cEpicBlocker &7»" #Prefix that comes by default you can customize it without any problem.
 
@@ -30,11 +30,10 @@ blocked-words:
   - bitch
   - Pussy
   - Ass
-  - Bullshit
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # | Messages                                 |
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
-error-message: "&cThis word is blocked by the server"
-no-permission-message: "&c&lUPS &cSorry, but you do not have permission to execute this command."
+error-message: "&cThe word %word% is blocked on the server"
+no-permission-message: "&cSorry, but you do not have permission to execute this command."
