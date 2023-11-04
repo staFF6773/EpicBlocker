@@ -9,14 +9,23 @@ import utils.ChatUtils;
 
 public class playerblock implements Listener {
 
+    private final EpicBlocker plugin;
+
+    public playerblock(EpicBlocker plugin) {
+        this.plugin = plugin;
+    }
+
     @EventHandler
-    public void onChat(AsyncPlayerChatEvent event){
+    public void onChat(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
         String message = event.getMessage();
 
-        if (message.toLowerCase().contains("aternos")){
-            event.setCancelled(true);
-            player.sendMessage(ChatUtils.getColoredMessage(EpicBlocker.prefix+" &cNo escribas palabras feas en el chat"));
+        for (String blockedWord : plugin.getConfig().getStringList("blocked-words")) {
+            if (message.toLowerCase().contains(blockedWord.toLowerCase())) {
+                player.sendMessage(ChatUtils.getColoredMessage(EpicBlocker.prefix + " &cNo escribas palabras feas en el chat"));
+                event.setCancelled(true);
+                break;  // Puedes detener el bucle después de encontrar la primera coincidencia
+            }
         }
     }
 }
