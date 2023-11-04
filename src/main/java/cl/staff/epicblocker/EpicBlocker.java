@@ -22,8 +22,16 @@ public final class EpicBlocker extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
 
+        // prefix
         prefix = ChatColor.translateAlternateColorCodes('&', getConfig().getString("prefix", "&cEpicBlocker &7»"));
+
+        // Config
+
         ConfigManager.setupConfig(this);
+        getConfig().options().copyDefaults(true);
+        saveDefaultConfig();
+
+        //Register
         registerCommands();
         plugin = this;
         registerEvents();
@@ -38,6 +46,10 @@ public final class EpicBlocker extends JavaPlugin implements Listener {
 
     @Override
     public void onDisable() {
+
+        // Guardar configuración al desactivar el plugin
+        saveConfig();
+
         mycmd.sendMessage(ChatUtils.getColoredMessage("&cEpicBlocker &7is disabling, if this is a reload and you experience issues consider rebooting."));
         mycmd.sendMessage(ChatUtils.getColoredMessage("&7Commands Saved Successfully"));
         mycmd.sendMessage(ChatUtils.getColoredMessage("&7Goodbye!"));
@@ -48,7 +60,7 @@ public final class EpicBlocker extends JavaPlugin implements Listener {
     }
 
     public void registerEvents() {
-        getServer().getPluginManager().registerEvents(new playerblock(), this);
+        getServer().getPluginManager().registerEvents(new playerblock(this), this);
     }
 
     public static EpicBlocker getplugin() {
