@@ -1,11 +1,15 @@
 package cl.staff.epicblocker;
 
+import block.playerblock;
 import commands.reload;
 import manager.ConfigManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import utils.ChatUtils;
 
@@ -22,6 +26,8 @@ public final class EpicBlocker extends JavaPlugin implements Listener {
         ConfigManager.setupConfig(this);
         registerCommands();
         plugin = this;
+        registerEvents();
+
 
         mycmd.sendMessage(ChatUtils.getColoredMessage("   &c ___   &cEpicBloker &7v1.0.0        "));
         mycmd.sendMessage(ChatUtils.getColoredMessage("   &c|---   &7Running on Bukkit - Paper  "));
@@ -39,6 +45,10 @@ public final class EpicBlocker extends JavaPlugin implements Listener {
 
     public void registerCommands() {
         this.getCommand("reload").setExecutor(new reload(this));
+    }
+
+    public void registerEvents() {
+        getServer().getPluginManager().registerEvents(new playerblock(), this);
     }
 
     public static EpicBlocker getplugin() {
