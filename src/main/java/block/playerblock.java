@@ -18,6 +18,7 @@ public class playerblock implements Listener {
         this.plugin = plugin;
     }
 
+    // Evento de cancelar el mensaje que esta en la config
     @EventHandler
     public void onChat(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
@@ -29,6 +30,7 @@ public class playerblock implements Listener {
             return;  // No se aplica el bloqueo
         }
 
+        // Verifica si ese mensaje esta puesto en la config si esta puesto le manda el mensaje de error
         for (String word : plugin.getConfig().getStringList("blocked-words")) {
             if (message.toLowerCase().contains(word.toLowerCase())) {
                 blockedWord = word;
