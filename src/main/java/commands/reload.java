@@ -29,8 +29,10 @@ public class reload implements CommandExecutor {
             String noPermissionMessage = plugin.getConfig().getString("no-permission-message");
             // Si no se encuentra el mensaje en la configuración, usa uno por defecto
             if (noPermissionMessage == null) {
-                noPermissionMessage = "&c&lUPS &cSorry, but you do not have permission to execute this command.";
+                noPermissionMessage = "&c&lUPS &cSorry, but you, %eb-player%, do not have permission to execute this command.";
             }
+            // Reemplaza "%player%" con el nombre del jugador
+            noPermissionMessage = noPermissionMessage.replace("%eb-player%", sender.getName());
             // Envía el mensaje de falta de permisos
             sender.sendMessage(ChatUtils.getColoredMessage(EpicBlocker.prefix + " " + noPermissionMessage));
         }
