@@ -33,7 +33,7 @@ public class playerblock implements Listener {
             if (message.toLowerCase().contains(word.toLowerCase())) {
                 blockedWord = word;
                 String errorMessage = plugin.getConfig().getString("error-message");
-                errorMessage = errorMessage.replace("%word%", blockedWord); // Reemplazar %word% con la palabra bloqueada
+                errorMessage = errorMessage.replace("%eb-word%", blockedWord); // Reemplazar %word% con la palabra bloqueada
                 errorMessage = errorMessage.replace("%eb-player%", player.getName()); // Reemplazar %eb-player% con el nombre del jugador
                 player.sendMessage(ChatUtils.getColoredMessage(EpicBlocker.prefix + " " + errorMessage));
                 event.setCancelled(true);
