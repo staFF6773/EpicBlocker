@@ -35,5 +35,11 @@ blocked-words:
 # | Messages                                 |
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
-error-message: "&cThe word %word% is blocked on the server"
-no-permission-message: "&cSorry, but you do not have permission to execute this command."
+# Placeholder At the moment the plugin,
+# is not available with the placeholderApi.
+
+# %eb-word% - Shows you the blocked word
+# %eb-player% - Shows you the player's name
+
+error-message: "&cThe word %eb-word% is blocked on the server"
+no-permission-message: "&c&lUPS &cSorry, but you, %eb-player%, do not have permission to execute this command."
