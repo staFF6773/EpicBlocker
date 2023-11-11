@@ -23,6 +23,9 @@ prefix: "&cEpicBlocker &7»" #Prefix that comes by default you can customize it 
 # | CHAT MANAGEMENT                          |
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
+# Should the blocker words feature be enabled?
+enabled: true
+
 # List of words that will be blocked
 blocked-words:
   - fuck
