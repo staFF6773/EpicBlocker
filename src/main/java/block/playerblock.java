@@ -5,7 +5,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
-import org.bukkit.plugin.Plugin;
 import utils.ChatUtils;
 
 import java.util.regex.Pattern;
@@ -20,6 +19,11 @@ public class playerblock implements Listener {
 
     @EventHandler
     public void onChat(AsyncPlayerChatEvent event) {
+        // Verificar si el bloqueo está desactivado en la configuración
+        if (!plugin.getConfig().getBoolean("enabled", true)) {
+            return;
+        }
+
         Player player = event.getPlayer();
         String message = event.getMessage();
         String blockedWord = null; // Variable para almacenar la palabra bloqueada
@@ -39,13 +43,10 @@ public class playerblock implements Listener {
                 event.setCancelled(true);
                 break; // Sale del bucle tan pronto como se encuentra una palabra bloqueada
             }
-
         }
 
         if (blockedWord != null) {
             // Aquí puedes hacer lo que necesites con la palabra bloqueada y el nombre del jugador.
         }
     }
-
-
 }
