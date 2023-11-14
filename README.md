@@ -14,13 +14,13 @@ Whether you aim to create a family-friendly server, enforce community guidelines
 - If you have any error or bug reports, or just need help with this plugin, or have a suggestion feel free to join my [discord server](https://discord.gg/mjvPdx9nC8), or if you don't use discord you can write me in discussions, although, response time may be longer.
 
 ## FEATURES:
-- hexColors Support legacy
-- word-blocking
-- Simple configuration
-- Highly configurable
+- hexColors Support legacy.
+- word-blocking.
+- Simple configuration.
+- Highly configurable.
 
 ## Commands:
-- /epicblocker:reload - Reloads all plugin settings
+- /epicblocker:reload - Reloads all plugin settings.
 
 ## Permissions:
 - Reload - epicblocker.reload
